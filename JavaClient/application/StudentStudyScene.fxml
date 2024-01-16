@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="957.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StudentStudyController">
+   <children>
+      <Pane layoutX="174.0" layoutY="47.0" prefHeight="64.0" prefWidth="783.0" style="-fx-background-color: #839ccb;">
+         <children>
+            <Label layoutY="17.0" text="Studying students ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+         </children>
+         <effect>
+            <InnerShadow height="20.0" radius="4.5" width="0.0" />
+         </effect>
+      </Pane>
+      <Pane layoutX="174.0" layoutY="579.0" prefHeight="25.0" prefWidth="783.0" style="-fx-background-color: #E5E5E5; -fx-border-style: solid hidden hidden hidden; -fx-border-color: #D5D5D5;">
+         <children>
+            <Label fx:id="lblResponse" layoutX="6.0" layoutY="4.0" />
+         </children>
+      </Pane>
+      <VBox prefHeight="605.0" prefWidth="176.0" style="-fx-background-color: #256b93;">
+         <children>
+            <Pane prefHeight="146.0" prefWidth="167.0">
+               <children>
+                  <ImageView fitHeight="103.0" fitWidth="131.0" layoutX="21.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ContosoLogo.PNG" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button mnemonicParsing="false" onAction="#btnSwitchToHome" prefHeight="56.0" prefWidth="215.0" style="-fx-background-color: #256b93;" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btnSwitchToStudents" prefHeight="56.0" prefWidth="215.0" style="-fx-background-color: #256b93;" text="Students" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btnSwitchToCourses" prefHeight="56.0" prefWidth="215.0" style="-fx-background-color: #254a8c;" text="Courses" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btnSwitchToExams" prefHeight="56.0" prefWidth="215.0" style="-fx-background-color: #256b93;" text="Exams" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btnSwitchToFaculties" prefHeight="56.0" prefWidth="215.0" style="-fx-background-color: #256b93;" text="Faculties" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btnSwitchToEmployees" prefHeight="56.0" prefWidth="215.0" style="-fx-background-color: #256b93;" text="Employees" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow height="0.0" radius="3.2825" width="15.13" />
+         </effect>
+      </VBox>
+      <TableView fx:id="tblViewStudentStudy" editable="true" layoutX="194.0" layoutY="131.0" prefHeight="319.0" prefWidth="569.0">
+         <columns>
+            <TableColumn fx:id="columnStudentId" prefWidth="90.0" text="Student Id" />
+            <TableColumn fx:id="columnCourseId" prefWidth="101.0" text="Course Id" />
+            <TableColumn fx:id="columnStartDate" prefWidth="116.0" text="Start Date " />
+            <TableColumn fx:id="columnEndDate" prefWidth="116.0" text="End Date " />
+         </columns>
+      </TableView>
+      <TextArea fx:id="txtError" layoutX="194.0" layoutY="497.0" prefHeight="64.0" prefWidth="691.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="957.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ResultController">
+   <children>
+      <Pane layoutX="174.0" layoutY="47.0" prefHeight="64.0" prefWidth="783.0" style="-fx-background-color: #839ccb;">
+         <children>
+            <Label layoutX="14.0" layoutY="17.0" text="Results">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+         </children>
+         <effect>
+            <InnerShadow height="10.0" radius="2.0" width="0.0" />
+         </effect>
+      </Pane>
+      <Pane layoutX="174.0" layoutY="579.0" prefHeight="25.0" prefWidth="783.0" style="-fx-background-color: #E5E5E5; -fx-border-style: solid hidden hidden hidden; -fx-border-color: #D5D5D5;">
+         <children>
+            <Label fx:id="lblResponse" layoutX="6.0" layoutY="4.0" />
+         </children>
+      </Pane>
+      <VBox layoutX="-2.0" prefHeight="605.0" prefWidth="176.0" style="-fx-background-color: #256b93; -fx-dropShadow: black;">
+         <children>
+            <Pane prefHeight="146.0" prefWidth="167.0">
+               <children>
+                  <ImageView fitHeight="103.0" fitWidth="131.0" layoutX="21.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ContosoLogo.PNG" />
+                     </image>
+                  </ImageView>
+                  <VBox layoutX="-1.0" prefHeight="605.0" prefWidth="176.0" style="-fx-background-color: #256b93;">
+                     <children>
+                        <Pane prefHeight="146.0" prefWidth="167.0" />
+                        <Button mnemonicParsing="false" onAction="#btnSwitchToHome" prefHeight="56.0" prefWidth="215.0" style="-fx-background-color: #256b93;" text="Home" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnSwitchToStudents" prefHeight="56.0" prefWidth="215.0" style="-fx-background-color: #256b93;" text="Students" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnSwitchToCourses" prefHeight="56.0" prefWidth="215.0" style="-fx-background-color: #256b93;" text="Courses" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnSwitchToExams" prefHeight="56.0" prefWidth="215.0" style="-fx-background-color: #254a8c;" text="Exams" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnSwitchToFaculties" prefHeight="56.0" prefWidth="215.0" style="-fx-background-color: #256b93;" text="Faculties" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnSwitchToEmployees" prefHeight="56.0" prefWidth="215.0" style="-fx-background-color: #256b93;" text="Employees" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <effect>
+                        <DropShadow height="0.0" radius="3.2825" width="15.13" />
+                     </effect>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow height="0.0" radius="3.2825" width="15.13" />
+         </effect>
+      </VBox>
+      <Pane layoutX="188.0" layoutY="124.0" prefHeight="319.0" prefWidth="562.0" />
+      <Pane layoutX="174.0" layoutY="458.0" prefHeight="101.0" prefWidth="556.0" />
+      <TableView fx:id="tblViewResult" editable="true" layoutX="204.0" layoutY="141.0" prefHeight="319.0" prefWidth="569.0">
+         <columns>
+            <TableColumn fx:id="columnStudentId" prefWidth="90.0" text="Student Id" />
+            <TableColumn fx:id="columnExamId" prefWidth="101.0" text="Exam Id" />
+            <TableColumn fx:id="columnPoints" prefWidth="116.0" text="Points " />
+         </columns>
+      </TableView>
+      <TextArea fx:id="txtError" layoutX="204.0" layoutY="507.0" prefHeight="64.0" prefWidth="691.0" />
+   </children>
+</AnchorPane>
