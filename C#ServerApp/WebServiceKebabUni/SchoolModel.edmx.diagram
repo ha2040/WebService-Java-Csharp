@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="51527d105bb14e70b1d068a653f88ee9" Name="Diagram1">
+        <EntityTypeShape EntityType="SchoolModel.Course" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.Employee" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.Exam" Width="1.5" PointX="7.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.Faculty" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.Result" Width="1.5" PointX="9.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.Student" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.StudentStudy" Width="1.5" PointX="7.5" PointY="3" IsExpanded="true" />
+        <AssociationConnector Association="SchoolModel.FK_Course_Employee_EmpID" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolModel.FK_Course_Faculty_FacultyID" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolModel.FK_Exam_CourseID" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolModel.FK_StudentStudy_Course_CourseID" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolModel.FK_Employee_Faculty_FacultyID" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolModel.FK_Result_ExamID" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolModel.FK_Result_StudentID" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolModel.FK_StudentStudy_Student_StudentID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
